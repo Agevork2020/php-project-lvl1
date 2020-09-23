@@ -1,0 +1,14 @@
+{
+    "name": "agevork1/brain-games",
+    "description": "project 1",
+    "authors": [
+        {
+            "name": "agevork",
+            "email": "agevork@yandex.ru"
+        }
+    ],
+    "require": {}
+    "bin": [
+      "bin/brain-games"
+    ]
+}
