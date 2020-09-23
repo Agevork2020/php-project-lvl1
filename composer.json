@@ -7,7 +7,7 @@
             "email": "agevork@yandex.ru"
         }
     ],
-    "require": {}
+    "require": {},
     "bin": [
       "bin/brain-games"
     ]
