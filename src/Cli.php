@@ -2,10 +2,15 @@
 
 namespace Brain\Games\Cli;
 
+use function cli\line;
+use function cli\prompt;
 
-function run() {
-echo('Welcome to the Brain Games!
-May I have your name? John
-Hello, John!');
+function run() 
+{
+
+line('Welcome to the Brain Game!');
+$name = prompt('May I have your name?');
+line("Hello, %s!", $name);
 }
+
 ?>
