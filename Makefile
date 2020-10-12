@@ -18,3 +18,9 @@ brain-progression:
 
 brain-prime:
 	./bin/brain-prime
+	
+brain-games:
+	php bin/brain-games.php
+	
+validate:
+	composer validate
