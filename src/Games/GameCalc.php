@@ -10,18 +10,16 @@ function playGame()
     function solving ($x, $y, $operator) {
         if ($operator === '*') {
             return $x * $y;
-        }
-        elseif ($operator === '-') {
+        } elseif ($operator === '-') {
             return $x - $y;
-        }
-        elseif ($operator === '+') {
+        } elseif ($operator === '+') {
             return $x + $y;
         }
 
     }
 
     $result = [];
-    for($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
 
         $rand1 = rand(-30, 30);
         $rand2 = rand(-30, 30);

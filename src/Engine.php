@@ -5,8 +5,8 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function startEngine($thepoint, $result) 
-{   
+function startEngine($thepoint, $result)
+{
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
@@ -20,7 +20,8 @@ function startEngine($thepoint, $result)
             print_r("Correct\n");
             $i++;
         } else {
-            print_r("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$result[$i][1]}'. Let's try again, {$name}!\n");
+            print_r("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$result[$i][1]}'. 
+            Let's try again, {$name}!\n");
             $i = 0;
         }
     }

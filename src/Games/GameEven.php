@@ -10,7 +10,7 @@ function playGame()
 
     
     $result = [];
-    for($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $question = rand(-100, 100);
         $rightAnswer = $question % 2 === 0 ? 'yes' : 'no';
         $result[$i] = [$question, $rightAnswer];
