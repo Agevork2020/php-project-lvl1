@@ -8,7 +8,7 @@ function playGame()
 {
     $thepoint = 'What number is missing in the progression?';
 
-    function makeQuestion($randLength, $randHidden, $randFirst, $randStep) 
+    function makeQuestion($randLength, $randHidden, $randFirst, $randStep)
     {
         $result1 = '';
         for ($i = 0; $i < $randHidden; $i++) {

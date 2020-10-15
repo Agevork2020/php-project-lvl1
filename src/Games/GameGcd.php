@@ -7,7 +7,7 @@ use function Brain\Games\Engine\startEngine;
 function playGame()
 {
     $thepoint = 'Find the greatest common divisor of given numbers.';
-    function gcd($x, $y) 
+    function gcd($x, $y)
     {
         if ($x === $y) {
             return $x;
