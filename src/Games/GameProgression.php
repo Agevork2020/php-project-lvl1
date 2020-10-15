@@ -4,11 +4,12 @@ namespace Brain\Games\Games\GameProgression;
 
 use function Brain\Games\Engine\startEngine;
 
-function playGame() 
+function playGame()
 {
     $thepoint = 'What number is missing in the progression?';
 
-    function makeQuestion($randLength, $randHidden, $randFirst, $randStep) {
+    function makeQuestion($randLength, $randHidden, $randFirst, $randStep) 
+    {
         $result1 = '';
         for ($i = 0; $i < $randHidden; $i++) {
             $x = $randFirst + $randStep * $i;
@@ -20,11 +21,10 @@ function playGame()
             $result2 = "{$result2} {$y}";
         }
         return "{$result1} ... {$result2}";
-
     }
 
     $result = [];
-    for($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $randLength = rand(5, 15);
         $randHidden = rand(0, $randLength - 1);
         $randFirst = rand(0, 30);

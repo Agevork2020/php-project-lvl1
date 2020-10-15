@@ -18,4 +18,3 @@ function playGame()
 
     startEngine($thepoint, $result);
 }
-
