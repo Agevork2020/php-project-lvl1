@@ -35,6 +35,5 @@
     "scripts": {
       "phpcs": "./vendor/squizlabs/php_codesniffer/bin/phpcs"
     },
-    "phpcs.executablePath": "./vendor/squizlabs/php_codesniffer/bin/phpcs"
-
+    "license": "MIT"
 }
