@@ -20,7 +20,7 @@ function startEngine($thepoint, $result)
             $i++;
             if ($i === 3) {
                 print_r("Congratulations, {$name}!\n");
-            }           
+            }
         } else {
             print_r("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$result[$i][1]}'. 
 Let's try again, {$name}!\n");
