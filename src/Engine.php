@@ -19,9 +19,10 @@ function startEngine($thepoint, $result)
             print_r("Correct\n");
             $i++;
         } else {
-            print_r("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$result[$i][1]}'.\nLet's try again, {$name}!\n");
+            print_r("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$result[$i][1]}'. 
+Let's try again, {$name}!\n");
             break;
         }
         print_r("Congratulations, {$name}!\n");
-    }   
+    }
 }
