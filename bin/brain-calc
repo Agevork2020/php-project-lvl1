@@ -9,5 +9,3 @@ if (file_exists($autoloadPath1)) {
 }
 use function Brain\Games\Games\GameCalc\playGame;
 playGame();
-
-?>

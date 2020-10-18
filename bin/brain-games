@@ -11,4 +11,3 @@ use function Brain\Games\Cli\run;
 echo "Welcome to the Brain Games!";
 run();
 
-?>
