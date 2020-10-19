@@ -16,4 +16,4 @@ I love :coffee: :pizza: and :dancer:.
 - `brain-even`,
 - `brain-calc`.
 
-Чтобы скачать игру, вам необходимо ввести в консоли "composer global require agevork1/brain-games @dev".
+Чтобы скачать игру, вам необходимо ввести в консоли `composer global require agevork1/brain-games @dev`.
