@@ -10,10 +10,10 @@ I love :coffee: :pizza: and :dancer:.
 
 Данный репозиторий содержит код, описывающий логику пяти математических игр. Каждая игра продолжается до трех побед. Условия игры вы сможете прочитать при запуске через введение названия игр в консоли:
 
--`brain-progression`,
--`brain-prime`,
--`brain-gcd`,
--`brain-even`,
--`brain-calc`.
+- `brain-progression`,
+- `brain-prime`,
+- `brain-gcd`,
+- `brain-even`,
+- `brain-calc`.
 
 Чтобы скачать игру, вам необходимо ввести в консоли "composer global require agevork1/brain-games @dev".
