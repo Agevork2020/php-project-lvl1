@@ -3,9 +3,10 @@
 namespace Brain\Games\Games\GameGcd;
 
 use function Brain\Games\Engine\startEngine;
+
 use const Brain\Games\Constants\ROUNDS_COUNT;
 
-function gcd($x, $y) 
+function gcd($x, $y)
 {
     if ($y) {
         return gcd($y, $x % $y);

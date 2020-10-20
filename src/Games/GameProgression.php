@@ -3,18 +3,18 @@
 namespace Brain\Games\Games\GameProgression;
 
 use function Brain\Games\Engine\startEngine;
-use const Brain\Games\Constants\ROUNDS_COUNT;
 
+use const Brain\Games\Constants\ROUNDS_COUNT;
 
 function makeQuestion($randLength, $randHidden, $randFirst, $randStep)
 {
     $result1 = '';
     for ($i = 1; $i < $randLength; $i++) {
         $x = $randFirst + $randStep * $i;
-        if($i === $randHidden) {
+        if ($i === $randHidden) {
             $x = "...";
-        }    
-        $result1 .= " $x";    
+        }
+        $result1 .= " $x";
     }
     return "{$randFirst}{$result1}";
 }

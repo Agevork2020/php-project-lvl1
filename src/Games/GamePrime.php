@@ -3,6 +3,7 @@
 namespace Brain\Games\Games\GamePrime;
 
 use function Brain\Games\Engine\startEngine;
+
 use const Brain\Games\Constants\ROUNDS_COUNT;
 
 function isPrime($x)

@@ -19,11 +19,9 @@ function startEngine($thepoint, $questions_answers)
             line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$questions_answers[$i][1]}'. 
 Let's try again, {$name}!");
             return false;
-        } 
+        }
         line("Correct!");
         $i++;
-    } 
+    }
     line("Congratulations, {$name}!");
 }
-
-

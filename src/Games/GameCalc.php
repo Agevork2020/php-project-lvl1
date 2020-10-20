@@ -3,20 +3,21 @@
 namespace Brain\Games\Games\GameCalc;
 
 use function Brain\Games\Engine\startEngine;
+
 use const Brain\Games\Constants\ROUNDS_COUNT;
 
 function solving($x, $y, $operator)
 {
-    switch ($operator) {
-    case '*':
-        return $x * $y; 
-    case '-':
-        return $x - $y;
-    case '+':
-        return $x + $y;
-    default:
-        throw new Error("Unknown operator: '{$operator}'!");
-    }
+        switch ($operator) {
+        case '*':
+            return $x * $y; 
+        case '-':
+            return $x - $y;
+        case '+':
+            return $x + $y;
+        default:
+            throw new Error("Unknown operator: '{$operator}'!");
+        }
 }
   
 function playGame()
