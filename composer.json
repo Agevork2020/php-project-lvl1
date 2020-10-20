@@ -26,7 +26,8 @@
           "src/Games/GameEven.php",
           "src/Games/GameGcd.php",
           "src/Games/GamePrime.php",
-          "src/Games/GameProgression.php"
+          "src/Games/GameProgression.php",
+          "src/Constants.php"
       ]
     },
     "require-dev": {

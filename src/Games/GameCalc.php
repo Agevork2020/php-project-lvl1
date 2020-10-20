@@ -3,33 +3,37 @@
 namespace Brain\Games\Games\GameCalc;
 
 use function Brain\Games\Engine\startEngine;
+use const Brain\Games\Constants\ROUNDS_COUNT;
 
+function solving($x, $y, $operator)
+{
+    switch ($operator) {
+    case '*':
+        return $x * $y; 
+    case '-':
+        return $x - $y;
+    case '+':
+        return $x + $y;
+    default:
+        throw new Error("Unknown operator: '{$operator}'!");
+    }
+}
+  
 function playGame()
 {
     $thepoint = 'What is the result of the expression?';
-    function solving($x, $y, $operator)
-    {
-        if ($operator === '*') {
-            return $x * $y;
-        } elseif ($operator === '-') {
-            return $x - $y;
-        } elseif ($operator === '+') {
-            return $x + $y;
-        }
+
+    $operators = ['*', '-', '+'];
+    $questions_answers = [];
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $x = rand(-30, 30);
+        $y = rand(-30, 30);
+        $randKey = array_rand($operators);
+        $operator = $operators[$randKey];
+        $question = "{$x} {$operator} {$y}";
+        $rightAnswer = (string) solving($x, $y, $operator);
+        $questions_answers[$i] = [$question, $rightAnswer];
     }
 
-    $result = [];
-    for ($i = 0; $i < 3; $i++) {
-        $rand1 = rand(-30, 30);
-        $rand2 = rand(-30, 30);
-        $operators = array('*', '-', '+');
-        $rand_key = array_rand($operators);
-        $rand_value = $operators[$rand_key];
-        $question = "{$rand1} {$rand_value} {$rand2}";
-        $rightAnswer0 = solving($rand1, $rand2, $rand_value);
-        $rightAnswer = "{$rightAnswer0}";
-        $result[$i] = [$question, $rightAnswer];
-    }
-
-    startEngine($thepoint, $result);
+    startEngine($thepoint, $questions_answers);
 }

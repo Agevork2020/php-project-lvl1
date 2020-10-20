@@ -3,30 +3,27 @@
 namespace Brain\Games\Games\GameGcd;
 
 use function Brain\Games\Engine\startEngine;
+use const Brain\Games\Constants\ROUNDS_COUNT;
+
+function gcd($x, $y) 
+{
+    if ($y) {
+        return gcd($y, $x % $y);
+    }
+    return $x;
+}
 
 function playGame()
 {
     $thepoint = 'Find the greatest common divisor of given numbers.';
-    function gcd($x, $y)
-    {
-        if ($x === $y) {
-            return $x;
-        } elseif ($x % $y === 0) {
-            return $y;
-        } elseif ($y % $x === 0) {
-            return $x;
-        } else {
-                return gcd($y, $x % $y);
-        }
-    }
-    $result = [];
-    for ($i = 0; $i < 3; $i++) {
+    
+    $questions_answers = [];
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $rand1 = rand(0, 50);
         $rand2 = rand(0, 50);
         $question = "{$rand1} {$rand2}";
-        $rightAnswer0 = gcd($rand1, $rand2);
-        $rightAnswer = "{$rightAnswer0}";
-        $result[$i] = [$question, $rightAnswer];
+        $rightAnswer = (string) gcd($rand1, $rand2);
+        $questions_answers[$i] = [$question, $rightAnswer];
     }
-    startEngine($thepoint, $result);
+    startEngine($thepoint, $questions_answers);
 }
