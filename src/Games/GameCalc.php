@@ -9,13 +9,13 @@ use const Brain\Games\Constants\ROUNDS_COUNT;
 function solving($x, $y, $operator)
 {
     switch ($operator) {
-        case '*':
+                case '*':
                 return $x * $y;
-        case '-':
+                case '-':
                 return $x - $y;
-        case '+':
+                case '+':
                 return $x + $y;
-        default:
+                default:
                 throw new Error("Unknown operator: '{$operator}'!");
     }
 }
