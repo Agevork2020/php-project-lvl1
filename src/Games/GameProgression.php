@@ -6,7 +6,6 @@ use function Brain\Games\Engine\startEngine;
 
 use const Brain\Games\Constants\ROUNDS_COUNT;
 
-
 function makeProgression($randLength, $randFirst, $randStep)
 {
     $result = [];
