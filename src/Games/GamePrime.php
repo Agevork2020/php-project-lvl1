@@ -23,12 +23,12 @@ function playGame()
 {
     $thepoint = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    $questions_answers = [];
+    $questionsAnswers = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $question = rand(0, 100);
         $rightAnswer = isPrime($question) ? 'yes' : 'no';
-        $questions_answers[$i] = [$question, $rightAnswer];
+        $questionsAnswers[$i] = [$question, $rightAnswer];
     }
 
-    startEngine($thepoint, $questions_answers);
+    startEngine($thepoint, $questionsAnswers);
 }

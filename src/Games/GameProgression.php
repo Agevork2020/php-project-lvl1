@@ -8,22 +8,22 @@ use const Brain\Games\Constants\ROUNDS_COUNT;
 
 function makeQuestion($randLength, $randHidden, $randFirst, $randStep)
 {
-    $result1 = '';
+    $result = '';
     for ($i = 1; $i < $randLength; $i++) {
         $x = $randFirst + $randStep * $i;
         if ($i === $randHidden) {
             $x = "...";
         }
-        $result1 .= " $x";
+        $result .= " $x";
     }
-    return "{$randFirst}{$result1}";
+    return "{$randFirst}{$result}";
 }
 
 function playGame()
 {
     $thepoint = 'What number is missing in the progression?';
 
-    $questions_answers = [];
+    $questionsAnswers = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randLength = rand(5, 15);
         $randHidden = rand(1, $randLength - 1);
@@ -31,7 +31,7 @@ function playGame()
         $randStep = rand(2, 10);
         $question = makeQuestion($randLength, $randHidden, $randFirst, $randStep);
         $rightAnswer = (string) ($randFirst + $randStep * $randHidden);
-        $questions_answers[$i] = [$question, $rightAnswer];
+        $questionsAnswers[$i] = [$question, $rightAnswer];
     }
-    startEngine($thepoint, $questions_answers);
+    startEngine($thepoint, $questionsAnswers);
 }

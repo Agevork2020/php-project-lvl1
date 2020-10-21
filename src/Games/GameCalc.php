@@ -16,7 +16,7 @@ function solving($x, $y, $operator)
         case '+':
             return $x + $y;
         default:
-            throw new Error("Unknown operator: '{$operator}'!");
+            throw new \Exception("Unknown operator: '{$operator}'!");
     }
 }
   
@@ -25,7 +25,7 @@ function playGame()
     $thepoint = 'What is the result of the expression?';
 
     $operators = ['*', '-', '+'];
-    $questions_answers = [];
+    $questionsAnswers = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $x = rand(-30, 30);
         $y = rand(-30, 30);
@@ -33,8 +33,8 @@ function playGame()
         $operator = $operators[$randKey];
         $question = "{$x} {$operator} {$y}";
         $rightAnswer = (string) solving($x, $y, $operator);
-        $questions_answers[$i] = [$question, $rightAnswer];
+        $questionsAnswers[$i] = [$question, $rightAnswer];
     }
 
-    startEngine($thepoint, $questions_answers);
+    startEngine($thepoint, $questionsAnswers);
 }

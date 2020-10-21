@@ -18,13 +18,13 @@ function playGame()
 {
     $thepoint = 'Find the greatest common divisor of given numbers.';
     
-    $questions_answers = [];
+    $questionsAnswers = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $rand1 = rand(0, 50);
         $rand2 = rand(0, 50);
         $question = "{$rand1} {$rand2}";
         $rightAnswer = (string) gcd($rand1, $rand2);
-        $questions_answers[$i] = [$question, $rightAnswer];
+        $questionsAnswers[$i] = [$question, $rightAnswer];
     }
-    startEngine($thepoint, $questions_answers);
+    startEngine($thepoint, $questionsAnswers);
 }
